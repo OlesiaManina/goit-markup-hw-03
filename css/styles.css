@@ -41,10 +41,19 @@ img {
     height: auto;
   }
 
+  .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /* Лого и навигация */
 
 .header {
     display: flex;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .logo, .logo-footer {
@@ -119,15 +128,15 @@ img {
     color: var(--fourth-blue-color);
 }
 
-.container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+
+.header-nav .logo {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
-.header-nav a {
+.header-nav-item,
+.header-contact-item {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -155,14 +164,15 @@ img {
 .business-solutions-section {
     background-color: var(--second-background-color);
     text-align: center;
-    padding: 200px 452px 280px 452px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .business-solutions-text {
     margin-bottom: 30px;
 
-    width: 696px;
-    height: 120px;
+    /* width: 696px;
+    height: 120px; */
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
@@ -176,6 +186,9 @@ img {
     display: block;
     margin: auto;
 
+    cursor: pointer;
+    border-radius: 4px;
+
     width: 216px;
     height: 50px;
     font-weight: 700;
@@ -186,10 +199,10 @@ img {
     background-color: var(--fourth-blue-color);
 }
 
-.business-solutions-section {
-    width: 1600px;
-    height: 600px;
+.business-solutions-btn:active {
+    background-color: #188CE8;
 }
+
 
 /* Секция Особенности */
 
@@ -207,18 +220,14 @@ img {
     overflow: hidden;
   }
 
-  .peculiarities-list {
-    display: flex;
-  }
-
-  /* не понимаю, почему не применяется margin-left:not(:first-child): 30px и padding-left: 0; padding-right: 0 */
-  .peculiarities-list-item {
-    display: block;
+  .peculiarities-section {
     padding-top: 94px;
     padding-bottom: 94px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left:not(first-child) 30px;
+  }
+
+  .peculiarities-list {
+    display: flex;
+    gap: 30px;
   }
 
 .peculiarities-header {
@@ -261,7 +270,6 @@ img {
 .team-section {
     padding-top: 94px;
     padding-bottom: 94px;
-
     background-color: #F5F4FA;
 }
 
@@ -272,11 +280,6 @@ img {
     line-height: calc(42 / 36);
     text-align: center;
     color: var(--third-header-color);
-}
-
-.team-section-group {
-    width: 1170px;
-    margin: auto;
 }
 
 .team-list {
@@ -318,30 +321,19 @@ img {
 
 /* FOOTER */
 
-.address-list {
-    padding-left: 215px;
-    padding-bottom: 60px;
-
-    font-style: normal;
-}
-
 .footer-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--second-background-color);
 }
 
 .logo-footer {
     display: block;
-    padding-top: 60px;
-    padding-left: 215px;
     margin-bottom: 20px;
 
     font-weight: 700;
     font-size: 26px;
     line-height: calc(31 / 26);
-}
-
-.address-list-item:not(:last-child) {
-    margin-bottom: 9px;
 }
 
 .logo-footer-first {
@@ -352,6 +344,15 @@ img {
     color: var(--second-white-color);
 }
 
+.address-list {
+    font-style: normal;
+}
+
+.address-list-item,
+.address-link:first-child {
+    margin-bottom: 9px;
+}
+
 .address-main {
     font-size: 14px;
     line-height: calc(24 / 14);
@@ -359,10 +360,13 @@ img {
 }
 
 .address-link {
+    display: block;
+
     font-size: 14px;
     line-height: calc(24 / 14);
     color: rgba(255, 255, 255, 0.6);
 }
+
 
 .address-link:hover, .address-link:focus,
 .address-main:hover, .address-main:focus {
@@ -387,11 +391,10 @@ img {
 .examples-btn {
     display: block;
     padding: 6px 25px;
-
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border: none;
     border-radius: 4px;
-
     cursor: pointer;
+    
     background: #F5F4FA;
     font-weight: 500;
     font-size: 16px;
@@ -402,6 +405,7 @@ img {
 
 .examples-btn:hover,
 .examples-btn:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background: var(--fourth-blue-color);
     color: var(--second-white-color);
 }
