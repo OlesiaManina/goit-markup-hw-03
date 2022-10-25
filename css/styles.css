@@ -51,9 +51,12 @@ img {
 
 /* Лого и навигация */
 
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .header {
     display: flex;
-    border-bottom: 1px solid #ECECEC;
 }
 
 .logo, .logo-footer {
@@ -227,7 +230,15 @@ img {
 
   .peculiarities-list {
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
+  }
+
+  .peculiarities-list-item {
+    width: 270px;
+  }
+
+  .peculiarities-list-item:not(:first-child) {
+    margin-left: 30px;
   }
 
 .peculiarities-header {
@@ -348,8 +359,7 @@ img {
     font-style: normal;
 }
 
-.address-list-item,
-.address-link:first-child {
+.address-list-item:not(:last-child) {
     margin-bottom: 9px;
 }
 
