@@ -165,10 +165,14 @@ header {
 /* HERO */
 
 .business-solutions-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--second-background-color);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+    border: none;
 }
 
 .business-solutions-text {
@@ -202,7 +206,8 @@ header {
     background-color: var(--fourth-blue-color);
 }
 
-.business-solutions-btn:active {
+.business-solutions-btn:hover,
+.business-solutions-btn:focus  {
     background-color: #188CE8;
 }
 
